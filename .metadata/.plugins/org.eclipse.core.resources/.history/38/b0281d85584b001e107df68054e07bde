@@ -1,0 +1,14 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Salesman s1 = new Salesman("Jim", 1);
+		Salesman s2 = new Salesman("Sam", 2;)
+		
+		
+		System.out.println(s1.name);
+
+	}
+
+}
