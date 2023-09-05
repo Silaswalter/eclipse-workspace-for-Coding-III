@@ -14,15 +14,39 @@ public class Main {
 		Salesman s8 = new Salesman("Paul", 538);
 		Salesman[] dudes = {s1, s2, s3, s4, s5, s6, s7, s8};
 
+
 		
-		Salesman[] five = topFiveDudes(dudes);		
+		Salesman[] five = topFiveDudes(dudes);
+		System.out.println(five[1].name);
 		
-		for(int i = 0; i < five.length; i++)
-		{
-			System.out.println(five[i].name);
-		}						
-	}
+			/*for(int j = 0; j < topFive.length; j++ )
+			{
+				for(int i = 0; i < dudes.length; i++) 
+				{
+					if(dudes[i].inTopFive == false)
+					{
+						if(first < dudes[i].sales) 
+						{
+							first = dudes[i].sales;
+							topFive[j] = dudes[i];
+						}
+					}	
+				}
+				for(int k = 0; k < dudes.length; k++)
+				{
+					if(first == dudes[k].sales)
+					{
+						dudes[k].inTopFive = true;
+						first = 0;
+					}
+					
+				}
+				
+				System.out.println(topFive[j].name);
+				
+			}*/
 	
+	}
 	
 	public static Salesman[] topFiveDudes(Salesman dudes[]) {
 		float first = 0;
@@ -48,8 +72,17 @@ public class Main {
 					dudes[k].inTopFive = true;
 					first = 0;
 				}
+				
 			}
-		}				
-		return topFive;
+			
+			System.out.println(topFive[j].name);
+			
+		}
+		
+		
+		
+		return dudes;
 	}
+	
+
 }
