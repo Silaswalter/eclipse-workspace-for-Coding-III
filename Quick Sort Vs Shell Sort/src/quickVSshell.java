@@ -8,7 +8,7 @@ public class quickVSshell {
 		// TODO Auto-generated method stub
 		
 		
-		int array1[] = RandomArrayGenerator(1000);
+		int array1[] = RandomArrayGenerator(10000000);
 		int[] array2 = array1.clone();
 
 		displayArray(array1);
