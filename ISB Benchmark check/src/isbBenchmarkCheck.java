@@ -6,13 +6,21 @@ public class isbBenchmarkCheck {
 		
 		
 		int array1[] = randomizeArray(20);
-		int array2[] = array1;
-		int array3[] = array1;
-		insertSort(array1);
-		selectionSort(array2);
-		bubbleSort(array3);
-		
+		int array2[] = array1.clone();
+		int array3[] = array1.clone();
 		printArray(array1);
+		insertSort(array1);
+		printArray(array1);
+		System.out.println(" ");
+		
+		printArray(array2);
+		selectionSort(array2);
+		printArray(array2);
+		System.out.println(" ");
+		
+		printArray(array3);
+		bubbleSort(array3);
+		printArray(array3);
 
 	}
 
@@ -98,8 +106,9 @@ public class isbBenchmarkCheck {
 	public static int[] printArray(int array[])
 	{
 		for(int i = 0; i < array.length; i++){
-			System.out.println(array[i]);
+			System.out.print(array[i] + ", ");
 		}
+		System.out.println(" ");
 		return array;
 	}
 }
