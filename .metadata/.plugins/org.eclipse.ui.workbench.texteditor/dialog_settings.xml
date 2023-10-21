@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="array"/>
+		<item key="selection" value="merged"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="merged"/>
 			<item value="num"/>
 			<item value="for(int i = 0; i &lt; salesMen.length; i++)"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="array"/>
 			<item value="a"/>
 		</list>

@@ -5,6 +5,11 @@ public class UniqueCharacters {
 		// TODO Auto-generated method stub
 		String unique = "plates";
 		
+		
+		
+		
+		
+		
 		boolean answer = IsAllUnique(unique);
 		System.out.println(answer);
 	}
