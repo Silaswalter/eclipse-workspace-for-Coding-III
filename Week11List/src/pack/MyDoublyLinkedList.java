@@ -18,15 +18,16 @@ public class MyDoublyLinkedList<T> {
 		cNode.NextNode = newNode;
 		newNode.NextNode = nNode;
 		newNode.PreviousNode = cNode;
-		if(nNode != null) {
+		if (nNode != null) {
 			nNode.PreviousNode = newNode;
 		}
 		this.Size++;
 	}
 	
+	
 	//remove after
 	public void RemoveAfter(MyDoubleNode<T> node) {
-		if(node.NextNode == null) {
+		if (node.NextNode == null) {
 			return;
 		}
 		MyDoubleNode<T> cNode = node.NextNode;
@@ -40,11 +41,12 @@ public class MyDoublyLinkedList<T> {
 		this.Size--;
 	}
 	
+	
 	//search
 	public MyDoubleNode<T> Search(T tar){
 		MyDoubleNode<T> current = this.Head;
 		while(current != null) {
-			if(current.Data.equals(tar)) {
+			if (current.Data.equals(tar)) {
 				return current;
 			}
 			current = current.NextNode;
@@ -55,7 +57,7 @@ public class MyDoublyLinkedList<T> {
 	public void Append(T tar) {
 		MyDoubleNode<T> node = new MyDoubleNode<T>(tar);
 		//when there is no node there
-		if(this.Head == null) {
+		if (this.Head == null) {
 			this.Head = node;
 			this.Tail = node;
 		}
@@ -64,5 +66,17 @@ public class MyDoublyLinkedList<T> {
 		this.Tail = node;
 		this.Size++;
 	}
-
+	
+	public void Prepend(T tar) {
+		MyDoubleNode<T> node = new MyDoubleNode<T>(tar);
+		if (this.Head == null) {
+			this.Head = node;
+			this.Tail = node;
+		}
+		MyDoubleNode<T> headNode = this.Head;
+		this.Head = node;
+		node.NextNode = headNode;
+		headNode.PreviousNode = node;
+		this.Size++;
+	}
 }
