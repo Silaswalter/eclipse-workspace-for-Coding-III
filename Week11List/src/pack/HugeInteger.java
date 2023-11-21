@@ -187,7 +187,7 @@ public class HugeInteger extends MyDoublyLinkedList<Integer> {
 
 	}
 	
-	public void HugeIntSort() {
+	/*public void HugeIntSort() {
 		MyDoubleNode<Integer> currNode = this.Head;
 		MyDoubleNode<Integer> tempNode = new MyDoubleNode<Integer>();
 		for(int i = 1; i < this.Size; i++){
@@ -202,5 +202,5 @@ public class HugeInteger extends MyDoublyLinkedList<Integer> {
 				currNode = currNode.NextNode;
 			}
 		}
-	}
+	}*/
 }

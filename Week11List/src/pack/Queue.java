@@ -1,15 +1,14 @@
 package pack;
 
-public class Stack <T> extends MyDoublyLinkedList<T> implements iStack<T> {
-
-
+public class Queue <T> extends MyDoublyLinkedList<T> implements iQueue<T> {
+	
 	@Override
-	public void push(T data) {
-		this.Prepend(data);
+	public void Enqueue(T data) {
+		this.Append(data);
 	}
 
 	@Override
-	public T pop() {
+	public T Dequeue() {
 		if(this.Head.NextNode == this.Head) {
 			this.Head = null;
 			this.Tail = null;
@@ -42,6 +41,5 @@ public class Stack <T> extends MyDoublyLinkedList<T> implements iStack<T> {
 	@Override
 	public int getLength() {
 		return this.Size;
-	}
-
+		}
 }

@@ -1,10 +1,10 @@
 package pack;
 
-public interface iStack<T> {
-		//push
-		void push(T data);
+public interface iQueue<T> {
+		
+		void Enqueue(T data);
 		//pop
-		T pop();
+		T Dequeue();
 		//peek
 		T peek();
 		//isempty
