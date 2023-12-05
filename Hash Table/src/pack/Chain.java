@@ -38,9 +38,37 @@ public class Chain {
 			this.Size++;
 		} else {
 			while(temp.nextNode != null) {
-				temp
+				temp = temp.nextNode;
+			}
+			temp.nextNode = new Node(key, value);
+			this.Size++;
+		}
+	}
+	
+	public Boolean DeleteNodeByKey(int key){
+		Node previous = this.Header;
+		Node current;
+		if(previous != null) {
+			current = previous.nextNode;
+			if(previous.Key == key) {
+				this.Header = current;
+				previous.nextNode = null;
+				this.Size--;
+				return true;
+			}
+			while(current != null) {
+				if(current.Key == key) {
+					previous.nextNode = current.nextNode;
+					current.nextNode = null;
+					this.Size--;
+					return true;
+				} else {
+					previous = current;
+					current = current.nextNode;
+				}
 			}
 		}
+		return null;
 	}
 	
 	@Override

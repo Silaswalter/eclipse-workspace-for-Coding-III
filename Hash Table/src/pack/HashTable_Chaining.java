@@ -8,7 +8,9 @@ public class HashTable_Chaining extends HashTable {
 	public HashTable_Chaining(int Size) {
 		this.Size = Size;
 		this.Table = new Chain[Size];
-		for(int i = 0; i <)
+		for(int i = 0; i < Size; i++) {
+			this.Table[i] = new Chain();
+		}
 	}
 	
 	//hashing is the process to translate a key into a value for indexing/searching
@@ -28,7 +30,7 @@ public class HashTable_Chaining extends HashTable {
 		if(targetNode != null) {
 			targetNode.Value = value;
 		} else {
-			target
+			target.InsertNode(key, value);
 		}
 
 	}
@@ -44,8 +46,21 @@ public class HashTable_Chaining extends HashTable {
 
 	@Override
 	public void HashDelete(int key) {
-		// TODO Auto-generated method stub
-
+		// 1 using hashing function get the index of the key
+		int index = Hashing(key);
+		// 2 perform linked list delete
+		Chain target = Table[index];
+		target.DeleteNodeByKey(key);
+		
 	}
-
+	
+	@Override
+	public String toString() {
+		String output = "";
+		for(int i = 0; i < this.Size; i++) {
+			output += "[" + i + "]: " + this.Table[i].toString() + "\n";
+		}
+		return output;
+	}
+//probe, harder to understand and implement
 }

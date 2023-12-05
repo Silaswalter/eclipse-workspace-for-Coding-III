@@ -1,14 +1,12 @@
 package pack;
 
-public class Node {
+public class OpenAdress {
 	public int Key;
 	public int Value;
-	public Node nextNode;
 	
-	public Node(int Key, int Value) {
+	public OpenAdress(int Key, int Value) {
 		this.Key = Key;
 		this.Value = Value;
-		this.nextNode = null;
 	}
 	
 	@Override
