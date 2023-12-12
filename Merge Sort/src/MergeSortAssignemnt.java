@@ -3,7 +3,7 @@ import java.util.Random;
 public class MergeSortAssignemnt {
 
 	public static void main(String[] args) {
-		int array[] = RandomArrayGenerator(10);
+		int array[] = RandomArrayGenerator(100);
 
 		displayArray(array);
 
